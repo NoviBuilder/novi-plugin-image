@@ -28,6 +28,21 @@ function onClick(element) {
 
 }
 
-function onSubmitClick(element, path) {
+function onSubmitClick(element, path, data) {
+    if (data.underLimit) return novi.element.setAttribute(element, "src", path);
+    let originalRatio = element.offsetWidth / element.offsetHeight;
+    modal.imageCrop({
+        path,
+        aspect: originalRatio,
+        x: 0,
+        y: 0,
+        width: 100,
+        height: 100,
+        onCrop: onSubmitCrop.bind(this, element, path)
+    });
+
+}
+
+function onSubmitCrop(element, path){
     novi.element.setAttribute(element, "src", path);
 }

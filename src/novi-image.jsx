@@ -7,7 +7,7 @@ const Plugin = {
     name: "novi-plugin-image",
     title: "Novi Image",
     description: "Novi Image description",
-    version: "1.0.3",
+    version: "1.0.4",
     dependencies: {
     },
     defaults: {
