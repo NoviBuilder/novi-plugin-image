@@ -1,27 +1,22 @@
-# novi-button
+# novi-plugin-image
+Novi Builder Plugin for changing images
 
-## Install
+## How to Install
+You should follow several simple steps to intall this plugin:
+* Copy the novi-plugin-image.js file to your path/to/novibuilder/plugins folder.
+* Launch NoviBuilder 
 
-```
---save novi-button
-```
+## What you are able to do
+* Change images
 
-## API
+## Developer Settings
+* querySelector — contains a css selector which defines the Plugin container.
 
-```sh
-interface ViewportResizer
+## Usage
+For use plugin your element must match the CSS selector of querySelector setting.
 
-attribute Object messages;
-attribute Function onClick;
-```
-
-* onClick - callback функция, которая вызывается при клике на компонент.
-* messages - содержит объект с текстами для отображения внутри кнопки. В рамках компонента используется ключ textContent.
-
-## Data
-
-```sh
-interface ViewportResizer
-
-attribute String textContent;
+For example querySelector value is "img".
+In this case you need to add element <img>:
+```html
+<img src="images/blank.png" alt="">
 ```
