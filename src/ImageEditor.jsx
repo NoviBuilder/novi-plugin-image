@@ -1,6 +1,7 @@
 const React = novi.react.React;
 const Icon = novi.ui.icon;
 const Icons = novi.ui.icons;
+const Types = novi.types;
 
 const EditorItem = {
     trigger: <Icon>{Icons.ICON_PICTURE}</Icon>,
@@ -18,7 +19,7 @@ function onClick(element) {
     src = novi.element.getAttribute(element, "src");
     imgSrc = projectDir + src;
     _loadImage(imgSrc).then(ratio => {
-        novi.media.choose({onSubmit: onSubmitCrop.bind(this,element), ratio})
+        novi.media.choose({onSubmit: onSubmitCrop.bind(this,element), ratio, type: Types.mediaImage})
     })
 }
 
