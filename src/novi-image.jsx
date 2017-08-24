@@ -9,6 +9,7 @@ const Plugin = {
     description: "Novi Image description",
     version: "1.0.5",
     dependencies: {
+        novi: "0.8.4"
     },
     defaults: {
         querySelector: "img[src]"
