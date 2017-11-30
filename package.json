@@ -1,6 +1,6 @@
 {
   "name": "@novi_dev/novi-plugin-image",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Novi image plugin",
   "main": "dist/novi-plugin-image.js",
   "repository": {
