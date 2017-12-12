@@ -25,6 +25,7 @@ function onClick(element) {
 
 function onSubmitCrop(element, path){
     novi.element.setAttribute(element, "src", path);
+    novi.element.removeAttribute(element, "srcset");
 }
 
 function _loadImage(src) {
