@@ -18,8 +18,8 @@ function onClick(element) {
     projectDir = element.ownerDocument.querySelector("base").getAttribute("href");
     src = novi.element.getAttribute(element, "src");
     imgSrc = projectDir + src;
-    _loadImage(imgSrc).then(ratio => {
-        novi.media.choose({onSubmit: onSubmitCrop.bind(this,element), ratio, type: Types.mediaImage})
+    _loadImage(imgSrc).then((width, height) => {
+        novi.media.choose({onSubmit: onSubmitCrop.bind(this,element), width, height, type: Types.mediaImage})
     })
 }
 
@@ -36,8 +36,8 @@ function _loadImage(src) {
                 let img = e.target;
                 let width = img.naturalWidth,
                     height = img.naturalHeight;
-                let ratio = width / height;
-                resolve(ratio);
+
+                resolve(width, height);
             };
         }
     )

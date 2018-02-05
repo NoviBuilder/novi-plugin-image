@@ -7,9 +7,9 @@ const Plugin = {
     name: "novi-plugin-image",
     title: "Novi Image",
     description: "Novi Image description",
-    version: "1.0.6",
+    version: "1.0.7",
     dependencies: {
-        novi: "0.8.6"
+        novi: "0.9.0"
     },
     defaults: {
         querySelector: "img[src]"
